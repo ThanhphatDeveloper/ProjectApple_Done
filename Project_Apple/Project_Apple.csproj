@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B0FD7A3F-C0E6-4977-A010-1DC2E954744C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Project_Apple</RootNamespace>
+    <AssemblyName>Project_Apple</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>apple %281%29.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.AxShockwaveFlashObjects.13.0.4001\lib\net40\AxShockwaveFlashObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>Framework\Bunifu\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalDecisions.CrystalReports.Engine.1.0.0\lib\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalDecisions.ReportSource.1.0.0\lib\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalDecisions.Shared.1.0.0\lib\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalDecisions.Windows.Forms.1.0.0\lib\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.Desktop.v21.2, Version=21.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v21.2, Version=21.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v21.2.Core, Version=21.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v21.2.Core, Version=21.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v21.2, Version=21.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v21.2, Version=21.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI">
+      <HintPath>Framework\Guna.UI\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2">
+      <HintPath>Framework\Guna2\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.WinForms.10.0.40219.1\lib\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="ShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ShockwaveFlashObjects.13.0.4001\lib\net40\ShockwaveFlashObjects.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="XanderUI">
+      <HintPath>Framework\XanderUI\XanderUI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dangnhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dangnhap.Designer.cs">
+      <DependentUpon>Dangnhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DinhdangtienVN.cs" />
+    <Compile Include="Dulieudangnhap.cs" />
+    <Compile Include="frmBanhang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBanhang.Designer.cs">
+      <DependentUpon>frmBanhang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBaocao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBaocao.Designer.cs">
+      <DependentUpon>frmBaocao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBaoHanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBaoHanh.Designer.cs">
+      <DependentUpon>frmBaoHanh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChitietHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChitietHD.Designer.cs">
+      <DependentUpon>frmChitietHD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChitietphieunhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChitietphieunhap.Designer.cs">
+      <DependentUpon>frmChitietphieunhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDSkhachhang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDSkhachhang.Designer.cs">
+      <DependentUpon>frmDSkhachhang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNhaphang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNhaphang.Designer.cs">
+      <DependentUpon>frmNhaphang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuanLy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuanLy.Designer.cs">
+      <DependentUpon>frmQuanLy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuanlyHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuanlyHD.Designer.cs">
+      <DependentUpon>frmQuanlyHD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuanLyLoaiSP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuanLyLoaiSP.Designer.cs">
+      <DependentUpon>frmQuanLyLoaiSP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuanlyNhaCungCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuanlyNhaCungCap.Designer.cs">
+      <DependentUpon>frmQuanlyNhaCungCap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuanLyNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuanLyNV.Designer.cs">
+      <DependentUpon>frmQuanLyNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuanlyphieunhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuanlyphieunhap.Designer.cs">
+      <DependentUpon>frmQuanlyphieunhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuanLySP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuanLySP.Designer.cs">
+      <DependentUpon>frmQuanLySP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuanTK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuanTK.Designer.cs">
+      <DependentUpon>frmQuanTK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTaoTK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTaoTK.Designer.cs">
+      <DependentUpon>frmTaoTK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTimSP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTimSP.Designer.cs">
+      <DependentUpon>frmTimSP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmXembaocao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmXembaocao.Designer.cs">
+      <DependentUpon>frmXembaocao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLapHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLapHoaDon.Designer.cs">
+      <DependentUpon>frmLapHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mahoamatkhau.cs" />
+    <Compile Include="frmParents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmParents.Designer.cs">
+      <DependentUpon>frmParents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Thongbao.cs" />
+    <Compile Include="UserTen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserTen.Designer.cs">
+      <DependentUpon>UserTen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_DX.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User_DX.Designer.cs">
+      <DependentUpon>User_DX.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Dangnhap.resx">
+      <DependentUpon>Dangnhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBanhang.resx">
+      <DependentUpon>frmBanhang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBaocao.resx">
+      <DependentUpon>frmBaocao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBaoHanh.resx">
+      <DependentUpon>frmBaoHanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChitietHD.resx">
+      <DependentUpon>frmChitietHD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChitietphieunhap.resx">
+      <DependentUpon>frmChitietphieunhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDSkhachhang.resx">
+      <DependentUpon>frmDSkhachhang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNhaphang.resx">
+      <DependentUpon>frmNhaphang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuanLy.resx">
+      <DependentUpon>frmQuanLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuanlyHD.resx">
+      <DependentUpon>frmQuanlyHD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuanLyLoaiSP.resx">
+      <DependentUpon>frmQuanLyLoaiSP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuanlyNhaCungCap.resx">
+      <DependentUpon>frmQuanlyNhaCungCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuanLyNV.resx">
+      <DependentUpon>frmQuanLyNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuanlyphieunhap.resx">
+      <DependentUpon>frmQuanlyphieunhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuanLySP.resx">
+      <DependentUpon>frmQuanLySP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuanTK.resx">
+      <DependentUpon>frmQuanTK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTaoTK.resx">
+      <DependentUpon>frmTaoTK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTimSP.resx">
+      <DependentUpon>frmTimSP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmXembaocao.resx">
+      <DependentUpon>frmXembaocao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmParents.resx">
+      <DependentUpon>frmParents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLapHoaDon.resx">
+      <DependentUpon>frmLapHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UserTen.resx">
+      <DependentUpon>UserTen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_DX.resx">
+      <DependentUpon>User_DX.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Img\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BUS\BUS.csproj">
+      <Project>{9b66e582-6f77-4019-b83a-1aba8317df56}</Project>
+      <Name>BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{2e8539bc-8434-492d-b1e2-e7758cef2d7a}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="apple %281%29.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

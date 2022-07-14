@@ -1,0 +1,50 @@
+private void cboMaNhanvien_TextChanged(object sender, EventArgs e)
+        {
+            int dem = 0;
+            List<NhanVienDTO> list = nvBus.LoadDataBboBUS();
+            foreach (NhanVienDTO nv in list)
+            {
+                if (cboMaNhanvien.Text == nv.MaNV)
+                {
+                    txtHoten.Text = nv.HoTenNV;
+                    txtSdienthoai.Text = nv.SdtNV;
+                    rtbDiachi.Text = nv.DiaChi;
+                    dtpNgaySinh.EditValue = nv.NgaySinh.ToString("dd/MM/yyyy");
+                    if (nv.GioiTinh == "Nam")
+                    {
+                        radgrpGioitinh.SelectedIndex = 0;
+                    }
+                    else
+                    {
+                        radgrpGioitinh.SelectedIndex = 1;
+                    }
+
+                }
+                else
+                {
+                    dem++;
+                }
+            }
+            if (dem == list.Count())
+            {
+                txtHoten.ResetText();
+                txtSdienthoai.ResetText();
+                rtbDiachi.ResetText();
+                dtpNgaySinh.ResetText();
+            }
+        }
+
+
+private void frmTaoTK_Load(object sender, EventArgs e)
+        {
+            loadMaNVInCombobox();
+            loadMaQuyenInCombobox();
+            if (cboMaNhanvien == null)
+            {
+                cboMaNhanvien.Enabled = false;
+            }
+            else
+            {
+                cboMaNhanvien.Enabled = true;
+            }
+        }
