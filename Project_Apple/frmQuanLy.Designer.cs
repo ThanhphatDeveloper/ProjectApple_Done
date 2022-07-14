@@ -189,7 +189,7 @@
             this.user_DX1.Location = new System.Drawing.Point(0, 0);
             this.user_DX1.Name = "user_DX1";
             this.user_DX1.Size = new System.Drawing.Size(228, 48);
-            this.user_DX1.TabIndex = 0;
+            this.user_DX1.TabIndex = 10;
             this.user_DX1.Click += new System.EventHandler(this.user_DX1_Click);
             // 
             // txtTenNV
@@ -254,7 +254,7 @@
             this.btnQuanLySanPham.OnHoverTextColor = System.Drawing.Color.White;
             this.btnQuanLySanPham.selected = false;
             this.btnQuanLySanPham.Size = new System.Drawing.Size(228, 48);
-            this.btnQuanLySanPham.TabIndex = 5;
+            this.btnQuanLySanPham.TabIndex = 4;
             this.btnQuanLySanPham.Text = "     Quản Lý Sản Phẩm";
             this.btnQuanLySanPham.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnQuanLySanPham.Textcolor = System.Drawing.Color.White;
@@ -290,7 +290,7 @@
             this.btnQuanLyKhachHang.OnHoverTextColor = System.Drawing.Color.White;
             this.btnQuanLyKhachHang.selected = false;
             this.btnQuanLyKhachHang.Size = new System.Drawing.Size(228, 48);
-            this.btnQuanLyKhachHang.TabIndex = 5;
+            this.btnQuanLyKhachHang.TabIndex = 3;
             this.btnQuanLyKhachHang.Text = "     Quản Lý Khách Hàng";
             this.btnQuanLyKhachHang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnQuanLyKhachHang.Textcolor = System.Drawing.Color.White;
@@ -326,7 +326,7 @@
             this.btnBaoCao.OnHoverTextColor = System.Drawing.Color.White;
             this.btnBaoCao.selected = false;
             this.btnBaoCao.Size = new System.Drawing.Size(228, 48);
-            this.btnBaoCao.TabIndex = 5;
+            this.btnBaoCao.TabIndex = 9;
             this.btnBaoCao.Text = "     Báo Cáo";
             this.btnBaoCao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBaoCao.Textcolor = System.Drawing.Color.White;
@@ -362,7 +362,7 @@
             this.btnBaoHanh.OnHoverTextColor = System.Drawing.Color.White;
             this.btnBaoHanh.selected = false;
             this.btnBaoHanh.Size = new System.Drawing.Size(228, 48);
-            this.btnBaoHanh.TabIndex = 5;
+            this.btnBaoHanh.TabIndex = 8;
             this.btnBaoHanh.Text = "     Bảo Hành";
             this.btnBaoHanh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBaoHanh.Textcolor = System.Drawing.Color.White;
@@ -398,7 +398,7 @@
             this.btnQuanLyPhieuNhap.OnHoverTextColor = System.Drawing.Color.White;
             this.btnQuanLyPhieuNhap.selected = false;
             this.btnQuanLyPhieuNhap.Size = new System.Drawing.Size(228, 48);
-            this.btnQuanLyPhieuNhap.TabIndex = 5;
+            this.btnQuanLyPhieuNhap.TabIndex = 7;
             this.btnQuanLyPhieuNhap.Text = "     Quản Lý Phiếu Nhập";
             this.btnQuanLyPhieuNhap.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnQuanLyPhieuNhap.Textcolor = System.Drawing.Color.White;
@@ -434,7 +434,7 @@
             this.btnQuanLyNhaCungCap.OnHoverTextColor = System.Drawing.Color.White;
             this.btnQuanLyNhaCungCap.selected = false;
             this.btnQuanLyNhaCungCap.Size = new System.Drawing.Size(228, 48);
-            this.btnQuanLyNhaCungCap.TabIndex = 5;
+            this.btnQuanLyNhaCungCap.TabIndex = 6;
             this.btnQuanLyNhaCungCap.Text = "Quản Lý Nhà Cung Cấp";
             this.btnQuanLyNhaCungCap.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnQuanLyNhaCungCap.Textcolor = System.Drawing.Color.White;
@@ -506,7 +506,7 @@
             this.btnQuanLyNhanVien.OnHoverTextColor = System.Drawing.Color.White;
             this.btnQuanLyNhanVien.selected = false;
             this.btnQuanLyNhanVien.Size = new System.Drawing.Size(228, 48);
-            this.btnQuanLyNhanVien.TabIndex = 5;
+            this.btnQuanLyNhanVien.TabIndex = 2;
             this.btnQuanLyNhanVien.Text = "     Quản Lý Nhân Viên";
             this.btnQuanLyNhanVien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnQuanLyNhanVien.Textcolor = System.Drawing.Color.White;
@@ -542,7 +542,7 @@
             this.btnQuanLyTaiKhoan.OnHoverTextColor = System.Drawing.Color.White;
             this.btnQuanLyTaiKhoan.selected = false;
             this.btnQuanLyTaiKhoan.Size = new System.Drawing.Size(228, 48);
-            this.btnQuanLyTaiKhoan.TabIndex = 5;
+            this.btnQuanLyTaiKhoan.TabIndex = 1;
             this.btnQuanLyTaiKhoan.Text = "     Quản Lý Tài Khoản";
             this.btnQuanLyTaiKhoan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnQuanLyTaiKhoan.Textcolor = System.Drawing.Color.White;

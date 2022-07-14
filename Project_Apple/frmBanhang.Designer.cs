@@ -164,7 +164,7 @@
             this.numericKhuyenMai.Name = "numericKhuyenMai";
             this.numericKhuyenMai.ShadowDecoration.Parent = this.numericKhuyenMai;
             this.numericKhuyenMai.Size = new System.Drawing.Size(101, 25);
-            this.numericKhuyenMai.TabIndex = 22;
+            this.numericKhuyenMai.TabIndex = 11;
             this.numericKhuyenMai.ValueChanged += new System.EventHandler(this.numericKhuyenMai_ValueChanged);
             // 
             // numericSoLuong
@@ -185,7 +185,7 @@
             this.numericSoLuong.Name = "numericSoLuong";
             this.numericSoLuong.ShadowDecoration.Parent = this.numericSoLuong;
             this.numericSoLuong.Size = new System.Drawing.Size(101, 25);
-            this.numericSoLuong.TabIndex = 22;
+            this.numericSoLuong.TabIndex = 10;
             // 
             // cboDSSanPham
             // 
@@ -272,7 +272,7 @@
             this.txtGiaBan.Margin = new System.Windows.Forms.Padding(4);
             this.txtGiaBan.Name = "txtGiaBan";
             this.txtGiaBan.Size = new System.Drawing.Size(160, 28);
-            this.txtGiaBan.TabIndex = 11;
+            this.txtGiaBan.TabIndex = 9;
             this.txtGiaBan.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txtTenSP
@@ -290,7 +290,7 @@
             this.txtTenSP.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenSP.Name = "txtTenSP";
             this.txtTenSP.Size = new System.Drawing.Size(101, 28);
-            this.txtTenSP.TabIndex = 10;
+            this.txtTenSP.TabIndex = 8;
             this.txtTenSP.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // lblThanhTien
@@ -413,7 +413,7 @@
             this.btnThemVaoHoaDon.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnThemVaoHoaDon.Name = "btnThemVaoHoaDon";
             this.btnThemVaoHoaDon.Size = new System.Drawing.Size(179, 51);
-            this.btnThemVaoHoaDon.TabIndex = 16;
+            this.btnThemVaoHoaDon.TabIndex = 12;
             this.btnThemVaoHoaDon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panelThongTinChung
@@ -520,7 +520,7 @@
             this.txtSDTKH.Margin = new System.Windows.Forms.Padding(4);
             this.txtSDTKH.Name = "txtSDTKH";
             this.txtSDTKH.Size = new System.Drawing.Size(203, 28);
-            this.txtSDTKH.TabIndex = 4;
+            this.txtSDTKH.TabIndex = 2;
             this.txtSDTKH.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txtDiaChi
@@ -556,7 +556,7 @@
             this.txtTenKH.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenKH.Name = "txtTenKH";
             this.txtTenKH.Size = new System.Drawing.Size(203, 28);
-            this.txtTenKH.TabIndex = 5;
+            this.txtTenKH.TabIndex = 4;
             this.txtTenKH.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txtMaNV
@@ -574,7 +574,7 @@
             this.txtMaNV.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaNV.Name = "txtMaNV";
             this.txtMaNV.Size = new System.Drawing.Size(192, 28);
-            this.txtMaNV.TabIndex = 2;
+            this.txtMaNV.TabIndex = 3;
             this.txtMaNV.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txtTenNhanVien
@@ -592,7 +592,7 @@
             this.txtTenNhanVien.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenNhanVien.Name = "txtTenNhanVien";
             this.txtTenNhanVien.Size = new System.Drawing.Size(192, 28);
-            this.txtTenNhanVien.TabIndex = 3;
+            this.txtTenNhanVien.TabIndex = 5;
             this.txtTenNhanVien.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txtMaHD
@@ -610,7 +610,7 @@
             this.txtMaHD.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaHD.Name = "txtMaHD";
             this.txtMaHD.Size = new System.Drawing.Size(115, 28);
-            this.txtMaHD.TabIndex = 0;
+            this.txtMaHD.TabIndex = 1;
             this.txtMaHD.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // lblMaHD
@@ -668,7 +668,7 @@
             this.btnLuuKH.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnLuuKH.Name = "btnLuuKH";
             this.btnLuuKH.Size = new System.Drawing.Size(176, 50);
-            this.btnLuuKH.TabIndex = 8;
+            this.btnLuuKH.TabIndex = 7;
             this.btnLuuKH.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnLuuKH.Visible = false;
             // 

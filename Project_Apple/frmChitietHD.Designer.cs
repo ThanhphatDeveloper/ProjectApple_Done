@@ -308,14 +308,14 @@
             this.dtpNgayLap.Properties.EditFormat.FormatString = "g";
             this.dtpNgayLap.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dtpNgayLap.Size = new System.Drawing.Size(171, 26);
-            this.dtpNgayLap.TabIndex = 80;
+            this.dtpNgayLap.TabIndex = 3;
             // 
             // txtSDT
             // 
             this.txtSDT.Location = new System.Drawing.Point(377, 13);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(165, 33);
-            this.txtSDT.TabIndex = 1;
+            this.txtSDT.TabIndex = 2;
             // 
             // label3
             // 
@@ -342,14 +342,14 @@
             this.txtTennhanvien.Location = new System.Drawing.Point(1279, 14);
             this.txtTennhanvien.Name = "txtTennhanvien";
             this.txtTennhanvien.Size = new System.Drawing.Size(246, 33);
-            this.txtTennhanvien.TabIndex = 1;
+            this.txtTennhanvien.TabIndex = 5;
             // 
             // txtManhanvien
             // 
             this.txtManhanvien.Location = new System.Drawing.Point(1037, 13);
             this.txtManhanvien.Name = "txtManhanvien";
             this.txtManhanvien.Size = new System.Drawing.Size(88, 33);
-            this.txtManhanvien.TabIndex = 1;
+            this.txtManhanvien.TabIndex = 4;
             // 
             // label5
             // 

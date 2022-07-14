@@ -173,7 +173,7 @@
             this.dtpNgayLap.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dtpNgayLap.Properties.MaskSettings.Set("mask", "dd/MM/yyyy HH:mm");
             this.dtpNgayLap.Size = new System.Drawing.Size(193, 26);
-            this.dtpNgayLap.TabIndex = 1;
+            this.dtpNgayLap.TabIndex = 3;
             // 
             // bunifuCustomLabel4
             // 
@@ -309,7 +309,7 @@
             this.txtTenKH.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenKH.Name = "txtTenKH";
             this.txtTenKH.Size = new System.Drawing.Size(203, 28);
-            this.txtTenKH.TabIndex = 5;
+            this.txtTenKH.TabIndex = 4;
             this.txtTenKH.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtTenKH.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTenKH_KeyPress);
             // 
@@ -328,7 +328,7 @@
             this.txtTenNhanVien.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenNhanVien.Name = "txtTenNhanVien";
             this.txtTenNhanVien.Size = new System.Drawing.Size(192, 28);
-            this.txtTenNhanVien.TabIndex = 3;
+            this.txtTenNhanVien.TabIndex = 7;
             this.txtTenNhanVien.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txtMaHD
@@ -346,7 +346,7 @@
             this.txtMaHD.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaHD.Name = "txtMaHD";
             this.txtMaHD.Size = new System.Drawing.Size(115, 28);
-            this.txtMaHD.TabIndex = 0;
+            this.txtMaHD.TabIndex = 1;
             this.txtMaHD.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // lblMaHD
@@ -403,7 +403,7 @@
             this.txtSDTKH.Margin = new System.Windows.Forms.Padding(4);
             this.txtSDTKH.Name = "txtSDTKH";
             this.txtSDTKH.Size = new System.Drawing.Size(203, 28);
-            this.txtSDTKH.TabIndex = 4;
+            this.txtSDTKH.TabIndex = 2;
             this.txtSDTKH.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtSDTKH.OnValueChanged += new System.EventHandler(this.txtSDTKH_OnValueChanged);
             this.txtSDTKH.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSDTKH_KeyPress);
@@ -423,7 +423,7 @@
             this.txtMaNV.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaNV.Name = "txtMaNV";
             this.txtMaNV.Size = new System.Drawing.Size(192, 28);
-            this.txtMaNV.TabIndex = 2;
+            this.txtMaNV.TabIndex = 5;
             this.txtMaNV.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // btnLuuKH
@@ -448,7 +448,7 @@
             this.btnLuuKH.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnLuuKH.Name = "btnLuuKH";
             this.btnLuuKH.Size = new System.Drawing.Size(110, 50);
-            this.btnLuuKH.TabIndex = 8;
+            this.btnLuuKH.TabIndex = 9;
             this.btnLuuKH.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnLuuKH.Visible = false;
             this.btnLuuKH.Click += new System.EventHandler(this.btnLuuKH_Click);
@@ -694,7 +694,7 @@
             this.numericKhuyenMai.Properties.IsFloatValue = false;
             this.numericKhuyenMai.Properties.MaskSettings.Set("mask", "N00");
             this.numericKhuyenMai.Size = new System.Drawing.Size(184, 26);
-            this.numericKhuyenMai.TabIndex = 13;
+            this.numericKhuyenMai.TabIndex = 11;
             this.numericKhuyenMai.EditValueChanged += new System.EventHandler(this.numericKhuyenMai_EditValueChanged);
             // 
             // numericSoLuong
@@ -715,7 +715,7 @@
             this.numericSoLuong.Properties.IsFloatValue = false;
             this.numericSoLuong.Properties.MaskSettings.Set("mask", "N00");
             this.numericSoLuong.Size = new System.Drawing.Size(101, 26);
-            this.numericSoLuong.TabIndex = 12;
+            this.numericSoLuong.TabIndex = 10;
             this.numericSoLuong.EditValueChanged += new System.EventHandler(this.numericSoLuong_EditValueChanged);
             // 
             // cboDSSanPham
@@ -946,7 +946,7 @@
             this.btnThemVaoHoaDon.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnThemVaoHoaDon.Name = "btnThemVaoHoaDon";
             this.btnThemVaoHoaDon.Size = new System.Drawing.Size(179, 51);
-            this.btnThemVaoHoaDon.TabIndex = 16;
+            this.btnThemVaoHoaDon.TabIndex = 13;
             this.btnThemVaoHoaDon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnThemVaoHoaDon.Click += new System.EventHandler(this.btnThemVaoHoaDon_Click);
             // 
