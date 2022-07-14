@@ -184,5 +184,10 @@ namespace Project_Apple
         {
 
         }
+
+        private void user_DX1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

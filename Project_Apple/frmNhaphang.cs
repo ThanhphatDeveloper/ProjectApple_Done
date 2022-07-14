@@ -371,139 +371,9 @@ namespace Project_Apple
             
         }
 
-        private void btnThemSanPham_Click_1(object sender, EventArgs e)
-        {
-            try
-            {
-                if (numericSoLuongNhapOfTTPN.Value == 0)
-                {
-                    MessageBox.Show(mess.emptyNumberOfProduct, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-                else
-                {
-                    if (string.IsNullOrEmpty(txtMaSP.Text) || string.IsNullOrEmpty(txtTenSP.Text) || string.IsNullOrEmpty(cboLoai.Text) || string.IsNullOrEmpty(txtGiaGoc.Text) || string.IsNullOrEmpty(txtXuatXu.Text) || string.IsNullOrEmpty(cboNhaCungCapOfTTPN.Text) || string.IsNullOrEmpty(txtThanhTien.Text))
-                    {
-                        MessageBox.Show(mess.emptyInputOfFormNhapHang, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }
-                    
-                    foreach (LoaiSanPhamDTO loai in lstlSP)
-                    {
-                        if (loai.MaLoai == cboLoai.Text)
-                        {
-                            foreach (NhaCungCapDTO ncc in lstNCC)
-                            {
-                                if (ncc.MaNCC == cboNhaCungCapOfTTPN.Text)
-                                {
-                                    SanPhamDTO spDTO = new SanPhamDTO();
-                                    spDTO.MaSP = txtMaSP.Text;
-                                    spDTO.TenSP = txtTenSP.Text;
-                                    spDTO.MaLoai = cboLoai.SelectedValue.ToString();
-                                    spDTO.XuatXu = txtXuatXu.Text;
-                                    if (spBUS.ThemSanPham(spDTO))
-                                    {
-                                        MessageBox.Show(mess.addProductSuccess, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                        
-                                        return;
-                                    }
-                                    else
-                                    {
-                                        MessageBox.Show(mess.addProductFail, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        
 
-                                    }
-                                }
-                            }
-                        }
-                        MessageBox.Show(mess.typeNotExsit, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        cboLoai.ResetText();
-                        return;
-                    }
-                }
-
-                foreach (ChiTietPhieuNhapDTO ct in list)
-                {
-                    if (txtMaSP.Text == ct.MaSP)
-                    {
-                        ct.SoLuongNhap += (int)numericSoLuongNhapOfTTPN.Value;
-                        ct.ThanhTien += this.thanhTien;
-                        dgvNhaphang.DataSource = "";
-                        dgvNhaphang.AutoGenerateColumns = false;
-                        dgvNhaphang.DataSource = list;
-                        txtTongTienThanhToan.Text = DinhDangTienVND(TinhTongThanhTien());
-                        //..
-                        //btnThem.Visible = false;
-                        btnThemSanPham.Visible = true;
-                        //..
-                        txtTenSP.ResetText();
-                        cboLoai.ResetText();
-                        txtGiaGoc.ResetText();
-                        txtXuatXu.ResetText();
-                        cboLoai.ResetText();
-                        txtMaSP.ResetText();
-                        txtThanhTien.ResetText();
-                        numericSoLuongNhapOfTTPN.Value = 0;
-
-                        //..
-                        txtTenSP.Enabled = false;
-                        cboLoai.Enabled = false;
-                        txtGiaGoc.Enabled = false;
-                        txtXuatXu.Enabled = false;
-                        cboNhaCungCapOfTTPN.Enabled = false;
-                        numericSoLuongNhapOfTTPN.Enabled = false;
-                        return;
-                    }
-                }
-                //...
-                ChiTietPhieuNhapDTO ctPN = new ChiTietPhieuNhapDTO();
-                ctPN.MaPhieu = txtMaPhieu.Text;
-                ctPN.MaSP = txtMaSP.Text;
-                ctPN.TenSanPham = txtTenSP.Text;
-                ctPN.GiaGoc = Convert.ToDecimal(txtGiaGoc.Text);
-                this.giaGoc = Convert.ToDecimal(txtGiaGoc.Text);
-                ctPN.SoLuongNhap = Convert.ToInt32(numericSoLuongNhapOfTTPN.Text);
-                ctPN.SoLuongTon = Convert.ToInt32(numericSoLuongNhapOfTTPN.Text);
-                ctPN.MaNCC = cboNhaCungCapOfTTPN.SelectedValue.ToString();
-                ctPN.ThanhTien = this.thanhTien;
-                list.Add(ctPN);
-
-                //...
-                dgvNhaphang.DataSource = "";
-                dgvNhaphang.AutoGenerateColumns = false;
-                dgvNhaphang.DataSource = list;
-                txtTongTienThanhToan.Text = DinhDangTienVND(TinhTongThanhTien());
-
-                //..
-                //btnThem.Visible = false;
-                btnThemSanPham.Visible = true;
-                //..
-                txtTenSP.ResetText();
-                cboLoai.ResetText();
-                txtGiaGoc.ResetText();
-                txtXuatXu.ResetText();
-                cboLoai.ResetText();
-                txtMaSP.ResetText();
-                txtThanhTien.ResetText();
-                numericSoLuongNhapOfTTPN.Value = 0;
-
-                //..
-                txtTenSP.Enabled = false;
-                cboLoai.Enabled = false;
-                txtGiaGoc.Enabled = false;
-                txtXuatXu.Enabled = false;
-                cboNhaCungCapOfTTPN.Enabled = false;
-                numericSoLuongNhapOfTTPN.Enabled = false;
-            }
-            catch
-            {
-                MessageBox.Show(mess.emptyBill, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void btnThem_Click_1(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void btnCapnhat_Click_1(object sender, EventArgs e)
         {
@@ -631,6 +501,153 @@ namespace Project_Apple
                 {
                     return;
                 }
+            }
+        }
+
+        private void btnThemSanPham_Click(object sender, EventArgs e)
+        {
+            btnThem.Visible = true;
+            btnThemSanPham.Visible = false;
+            Int64 maSP = spBUS.PhatSinhMaSP() + 1;
+            string phatSinhMa = "SP" + maSP;
+            txtMaSP.Text = phatSinhMa;
+            txtMaSP.Enabled = false;
+            txtTenSP.Enabled = true;
+            cboLoai.Enabled = true;
+            txtXuatXu.Enabled = true;
+            txtGiaGoc.Enabled = true;
+            cboNhaCungCapOfTTPN.Enabled = true;
+            numericSoLuongNhapOfTTPN.Enabled = true;
+            txtTenSP.Focus();
+            btnCapnhat.Visible = false;
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (numericSoLuongNhapOfTTPN.Value == 0)
+                {
+                    MessageBox.Show(mess.emptyNumberOfProduct, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else
+                {
+                    if (string.IsNullOrEmpty(txtMaSP.Text) || string.IsNullOrEmpty(txtTenSP.Text) || string.IsNullOrEmpty(cboLoai.Text) || string.IsNullOrEmpty(txtGiaGoc.Text) || string.IsNullOrEmpty(txtXuatXu.Text) || string.IsNullOrEmpty(cboNhaCungCapOfTTPN.Text) || string.IsNullOrEmpty(txtThanhTien.Text))
+                    {
+                        MessageBox.Show(mess.emptyInputOfFormNhapHang, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    //...
+                    foreach (LoaiSanPhamDTO loai in lstlSP)
+                    {
+                        if (loai.MaLoai == cboLoai.Text)
+                        {
+                            foreach (NhaCungCapDTO ncc in lstNCC)
+                            {
+                                if (ncc.MaNCC == cboNhaCungCapOfTTPN.Text)
+                                {
+                                    SanPhamDTO spDTO = new SanPhamDTO();
+                                    spDTO.MaSP = txtMaSP.Text;
+                                    spDTO.TenSP = txtTenSP.Text;
+                                    spDTO.MaLoai = cboLoai.SelectedValue.ToString();
+                                    spDTO.XuatXu = txtXuatXu.Text;
+                                    if (spBUS.ThemSanPham(spDTO))
+                                    {
+                                        MessageBox.Show(mess.addProductSuccess, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        btnCapnhat.Visible = true;
+                                        return;
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show(mess.addProductFail, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                                    }
+                                }
+                            }
+                        }
+                        MessageBox.Show(mess.typeNotExsit, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        cboLoai.ResetText();
+                        return;
+                    }
+                }
+
+                foreach (ChiTietPhieuNhapDTO ct in list)
+                {
+                    if (txtMaSP.Text == ct.MaSP)
+                    {
+                        ct.SoLuongNhap += (int)numericSoLuongNhapOfTTPN.Value;
+                        ct.ThanhTien += this.thanhTien;
+                        dgvNhaphang.DataSource = "";
+                        dgvNhaphang.AutoGenerateColumns = false;
+                        dgvNhaphang.DataSource = list;
+                        txtTongTienThanhToan.Text = DinhDangTienVND(TinhTongThanhTien());
+                        //..
+                        btnThem.Visible = false;
+                        btnThemSanPham.Visible = true;
+                        //..
+                        txtTenSP.ResetText();
+                        cboLoai.ResetText();
+                        txtGiaGoc.ResetText();
+                        txtXuatXu.ResetText();
+                        cboLoai.ResetText();
+                        txtMaSP.ResetText();
+                        txtThanhTien.ResetText();
+                        numericSoLuongNhapOfTTPN.Value = 0;
+
+                        //..
+                        txtTenSP.Enabled = false;
+                        cboLoai.Enabled = false;
+                        txtGiaGoc.Enabled = false;
+                        txtXuatXu.Enabled = false;
+                        cboNhaCungCapOfTTPN.Enabled = false;
+                        numericSoLuongNhapOfTTPN.Enabled = false;
+                        return;
+                    }
+                }
+                //...
+                ChiTietPhieuNhapDTO ctPN = new ChiTietPhieuNhapDTO();
+                ctPN.MaPhieu = txtMaPhieu.Text;
+                ctPN.MaSP = txtMaSP.Text;
+                ctPN.TenSanPham = txtTenSP.Text;
+                ctPN.GiaGoc = Convert.ToDecimal(txtGiaGoc.Text);
+                this.giaGoc = Convert.ToDecimal(txtGiaGoc.Text);
+                ctPN.SoLuongNhap = Convert.ToInt32(numericSoLuongNhapOfTTPN.Text);
+                ctPN.SoLuongTon = Convert.ToInt32(numericSoLuongNhapOfTTPN.Text);
+                ctPN.MaNCC = cboNhaCungCapOfTTPN.SelectedValue.ToString();
+                ctPN.ThanhTien = this.thanhTien;
+                list.Add(ctPN);
+
+                //...
+                dgvNhaphang.DataSource = "";
+                dgvNhaphang.AutoGenerateColumns = false;
+                dgvNhaphang.DataSource = list;
+                txtTongTienThanhToan.Text = DinhDangTienVND(TinhTongThanhTien());
+
+                //..
+                btnThem.Visible = false;
+                btnThemSanPham.Visible = true;
+                //..
+                txtTenSP.ResetText();
+                cboLoai.ResetText();
+                txtGiaGoc.ResetText();
+                txtXuatXu.ResetText();
+                cboLoai.ResetText();
+                txtMaSP.ResetText();
+                txtThanhTien.ResetText();
+                numericSoLuongNhapOfTTPN.Value = 0;
+
+                //..
+                txtTenSP.Enabled = false;
+                cboLoai.Enabled = false;
+                txtGiaGoc.Enabled = false;
+                txtXuatXu.Enabled = false;
+                cboNhaCungCapOfTTPN.Enabled = false;
+                numericSoLuongNhapOfTTPN.Enabled = false;
+            }
+            catch
+            {
+                MessageBox.Show(mess.emptyBill, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

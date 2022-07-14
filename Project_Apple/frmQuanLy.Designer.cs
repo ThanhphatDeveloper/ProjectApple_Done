@@ -39,7 +39,6 @@
             this.btnMenu = new Bunifu.Framework.UI.BunifuImageButton();
             this.menuChild = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.user_DX1 = new Project_Apple.User_DX();
             this.txtTenNV = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.picUser = new System.Windows.Forms.PictureBox();
             this.btnQuanLySanPham = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -53,6 +52,7 @@
             this.btnQuanLyTaiKhoan = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pnllogo = new System.Windows.Forms.PictureBox();
             this.panelContent = new System.Windows.Forms.Panel();
+            this.user_DX1 = new Project_Apple.User_DX();
             this.guna2GroupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.menu.SuspendLayout();
@@ -182,15 +182,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(228, 48);
             this.panel2.TabIndex = 8;
-            // 
-            // user_DX1
-            // 
-            this.user_DX1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.user_DX1.Location = new System.Drawing.Point(0, 0);
-            this.user_DX1.Name = "user_DX1";
-            this.user_DX1.Size = new System.Drawing.Size(228, 48);
-            this.user_DX1.TabIndex = 10;
-            this.user_DX1.Click += new System.EventHandler(this.user_DX1_Click);
             // 
             // txtTenNV
             // 
@@ -569,6 +560,16 @@
             this.panelContent.Name = "panelContent";
             this.panelContent.Size = new System.Drawing.Size(1373, 806);
             this.panelContent.TabIndex = 7;
+            // 
+            // user_DX1
+            // 
+            this.user_DX1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.user_DX1.Location = new System.Drawing.Point(0, 0);
+            this.user_DX1.Name = "user_DX1";
+            this.user_DX1.Size = new System.Drawing.Size(228, 48);
+            this.user_DX1.TabIndex = 10;
+            this.user_DX1.Load += new System.EventHandler(this.user_DX1_Load);
+            this.user_DX1.Click += new System.EventHandler(this.user_DX1_Click);
             // 
             // frmQuanLy
             // 
