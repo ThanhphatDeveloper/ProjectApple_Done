@@ -40,46 +40,10 @@ namespace DAO
 
         // Hiển thị Dữ Liệu DataGridview
 
-        public DataTable XemDLDGV(string sql, DataGridView dgv)
-        {
-            Ketnoi();
-
-            SqlDataAdapter adap = new SqlDataAdapter(sql, cn);
-            DataTable dt = new DataTable();
-            adap.Fill(dt);
-            dgv.DataSource = dt;
-            Ngatketnoi();
-            return dt;
-        }
-
-        public DataTable XemDL(string sql)
-        {
-            Ketnoi();
-            SqlDataAdapter adap = new SqlDataAdapter(sql, cn);
-            DataTable dt = new DataTable();
-            adap.Fill(dt);
-            Ngatketnoi();
-            return dt;
-        }
+    
 
         //Phương thức truy vấn dữ liệu: Insert, Update, Delete
-        public SqlCommand ThucThiDl(string sql)
-        {
-            Ketnoi();
-
-            SqlCommand cm = new SqlCommand(sql, cn);
-            int i = cm.ExecuteNonQuery();
-            if (i > 0)
-            {
-                MessageBox.Show("Thành công");
-            }
-            else
-            {
-                MessageBox.Show("Không thành công");
-            }
-            Ngatketnoi();
-            return cm;
-        }
+   
 
         public SqlDataReader getdata(string sql)
         {
